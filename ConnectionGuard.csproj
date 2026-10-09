@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <Version>1.0</Version>
+    <AssemblyTitle>ConnectionGuard</AssemblyTitle>
+    <Product>ConnectionGuard</Product>
+    <Copyright>Copyright © hufang360 2026</Copyright>
+    <Authors>hufang360</Authors>
+    <Description>修复槽位满后永久停止监听导致无法连接的问题，并限制爬虫连接频率。</Description>
+    <PackageId>ConnectionGuard</PackageId>
+    <AssemblyName>ConnectionGuard</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591;MSB3270</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TShock" Version="6.2.1" />
+  </ItemGroup>
+
+</Project>
